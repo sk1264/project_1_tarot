@@ -1,0 +1,542 @@
+* {
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.parent{
+    border: solid 2px gray; 
+    background-color: white;
+    height: 100vh;
+    padding: 5%;
+    width: 100%;
+    display: flex;
+}
+
+.table{
+    border: solid 2px black;
+    background-color: rgb(193, 120, 212);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    justify-content: space-between;
+}
+
+.interpretation{
+    border: solid 2px rgb(249, 131, 184); 
+    background-color: white;
+    color: black;
+    height: 100%;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    padding: 80px 0;
+    font-size: 25px;
+    
+}
+
+.column {
+    height: 100%;
+    width: 50%;
+    background-color: #ffebcd47;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    padding: 10px 0;
+    height: 200px;
+    width: 140px;
+    position: relative;
+    display: inline-block;
+}
+
+#overlay{
+    width: 140px;
+    position: absolute;
+    transform: rotate(90deg);
+}
+
+.aceOfCups{
+    background-image: url(./images/Ace_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.aceOfPentacles{
+    background-image: url(./images/Ace_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.aceOfSwords{
+    background-image: url(./images/Ace_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.aceOfWands{
+    background-image: url(./images/Ace_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.death{
+    background-image: url(./images/Death.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.deckBackground{
+    background-image: url(./images/Deck_Background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.eightOfCups{
+    background-image: url(./images/Eight_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.eightOfPentacles{
+    background-image: url(./images/Eight_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.eightOfSwords{
+    background-image: url(./images/Eight_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.eightOfWands{
+    background-image: url(./images/Eight_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fiveOfCups{
+    background-image: url(./images/Five_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fiveOfPentacles{
+    background-image: url(./images/Five_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fiveOfSwords{
+    background-image: url(./images/Five_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fiveOfWands{
+    background-image: url(./images/Five_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fourOfCups{
+    background-image: url(./images/Four_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fourOfPentacles{
+    background-image: url(./images/Four_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fourOfSwords{
+    background-image: url(./images/Four_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fourOfWands{
+    background-image: url(./images/Four_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.judgement{
+    background-image: url(./images/Judgement.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.justice{
+    background-image: url(./images/Justice.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.kingOfCups{
+    background-image: url(./images/King_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.kingOfPentacles{
+    background-image: url(./images/King_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.kingOfSwords{
+    background-image: url(./images/King_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.kingOfWands{
+    background-image: url(./images/King_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.knightOfCups{
+    background-image: url(./images/Knight_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.knightOfPentacles{
+    background-image: url(./images/Knight_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.knightOfSwords{
+    background-image: url(./images/Knight_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.knightOfWands{
+    background-image: url(./images/Knight_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nineOfCups{
+    background-image: url(./images/Nine_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nineOfPentacles{
+    background-image: url(./images/Nine_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nineOfSwords{
+    background-image: url(./images/Nine_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nineOfWands{
+    background-image: url(./images/Nine_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pageOfCups{
+    background-image: url(./images/Page_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pageOfPentacles{
+    background-image: url(./images/Page_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pageOfSwords{
+    background-image: url(./images/Page_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pageOfWands{
+    background-image: url(./images/Page_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.queenOfCups{
+    background-image: url(./images/Queen_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.queenOfPentacles{
+    background-image: url(./images/Queen_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.queenOfSwords{
+    background-image: url(./images/Queen_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.queenOfWands{
+    background-image: url(./images/Queen_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sevenOfCups{
+    background-image: url(./images/Seven_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sevenOfPentacles{
+    background-image: url(./images/Seven_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sevenOfSwords{
+    background-image: url(./images/Seven_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sevenOfWands{
+    background-image: url(./images/Seven_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sixOfCups{
+    background-image: url(./images/Six_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sixOfPentacles{
+    background-image: url(./images/Six_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sixOfSwords{
+    background-image: url(./images/Six_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sixOfWands{
+    background-image: url(./images/Six_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.strength{
+    background-image: url(./images/Strength.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.temperance{
+    background-image: url(./images/Temperance.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tenOfCups{
+    background-image: url(./images/Ten_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tenOfPentacles{
+    background-image: url(./images/Ten_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tenOfSwords{
+    background-image: url(./images/Ten_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tenOfWands{
+    background-image: url(./images/Ten_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theChariot{
+    background-image: url(./images/The_Chariot.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theDevil{
+    background-image: url(./images/The_Devil.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theEmperor{
+    background-image: url(./images/The_Emperor.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theEmpress{
+    background-image: url(./images/The_Empress.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theFool{
+    background-image: url(./images/The_Fool.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theHangedMan{
+    background-image: url(./images/The_Hanged_Man.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theHermit{
+    background-image: url(./images/The_Hermit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theHierophant{
+    background-image: url(./images/The_Hierophant.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theHighPriestess{
+    background-image: url(./images/The_High_Priestess.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theLovers{
+    background-image: url(./images/The_Lovers.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theMagician{
+    background-image: url(./images/The_Magician.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theMoon{
+    background-image: url(./images/The_Moon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theStar{
+    background-image: url(./images/The_Star.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theSun{
+    background-image: url(./images/The_Sun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theTower{
+    background-image: url(./images/The_Tower.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.theWorld{
+    background-image: url(./images/The_World.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.threeOfCups{
+    background-image: url(./images/Three_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.threeOfPentacles{
+    background-image: url(./images/Three_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.threeOfSwords{
+    background-image: url(./images/Three_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.threeOfWands{
+    background-image: url(./images/Three_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.twoOfCups{
+    background-image: url(./images/Two_Of_Cups.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.twoOfPentacles{
+    background-image: url(./images/Two_Of_Pentacles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.twoOfSwords{
+    background-image: url(./images/Two_Of_Swords.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.twoOfWands{
+    background-image: url(./images/Two_Of_Wands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wheelOfFortune{
+    background-image: url(./images/Wheel_Of_Fortune.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.flipped{
+    transform: rotateX(180deg);
+}
