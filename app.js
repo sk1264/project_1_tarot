@@ -17,7 +17,7 @@ const playerNameDisplay = document.getElementById("player-name-display");
 // function that dictates player name for the game
 function startGame() {
   const playerName = playerNameInput.value;
-  playerNameDisplay.textContent = `Welcome ${playerName}!`;
+  playerNameDisplay.textContent = `Hello, ${playerName}.`;
   introScreen.style.display = "none";
   gameScreen.style.display = "block";
 }
