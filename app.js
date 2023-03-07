@@ -7,8 +7,12 @@ console.log("linked")
 // columnOne.innerHTML = "<div class = 'card theHighPriestess'></div>"
 // c1c1.classList.add("theHighPriestess")
 
+
+
+// BELOW CODE: code for button to start shuffled deck reading displayed on browser
 const startButton = document.getElementById('start-button');
 
+// BELOW CODE: used to keep track of the number of "bad" and "good" cards that appear during a reading.
 const reading = {
   badCards: 0,
   goodCards: 0,
@@ -16,6 +20,7 @@ const reading = {
 
 startButton.addEventListener('click', () => {
 
+// variable for the tarot cards array in the deck
 const tarotCards = [
   "theHighPriestess",
   "theEmpress",
@@ -95,15 +100,23 @@ const tarotCards = [
   "kingOfPentacles",
 ]
 
+// for loop utilized to shuffle the array
 for (let i = tarotCards.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1));
   [tarotCards[i], tarotCards[j]] = [tarotCards[j], tarotCards[i]];
 }
 
+// new array that contains the first 10 cards of tarotCards
 const pickedCards = tarotCards.slice(0, 10);
 
 console.log(pickedCards)
+
 const cards = document.querySelectorAll('.card');
+
+//BELOW:
+//SetAttribute (a method) calls on the current card element to set its class attribute to a string containing "card",
+//and the value of the corresponding element in the pickedCards array.
+//Now the card image will be displayed on the page.
 cards.forEach((card, index) => {
   console.log(pickedCards[index])
   card.setAttribute("class", `card ${pickedCards[index]}`);
