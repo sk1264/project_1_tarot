@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <script defer src="./app.js"></script>
-    <button id="start-button">Let's begin!</button>
-    <title>Tarot Card Game of Life</title>
+    <div id="intro-screen">
+        <h1>Discover your fate!</h1>
+        <p>Please enter your name:</p>
+        <input type="text" id="player-name-input" />
+        <button id="first-button">Start Game</button>
+      </div>
 </head>
 <body>
-    <h1>Discover your fate!</h1>
-    <p>Welcome to Tarot Card Game of Life!</p>
+    <title>Tarot Card Game of Life</title>
+    <div id="game-screen" style="display: none;">
+        <h2 id="player-name-display"></h2>
+    <h1>Welcome to Tarot Card Game of Life!</h1>
+    <p>Let the games begin...</p>
     <p>You are about to embark on a journey through the 10 biggest events of life. Based on your reading during each event, you will either receive a good or bad reading that will dictate a win or loss for each event. Get 6 or more good readings and you are a winner at life! However, get 6 or more bad readings and, well, the future isn’t looking too bright.</p>
-
+    <button id="start-button">Give me my reading!</button>
     <div class="parent">
         <div class="table">
             <div class="column one">
@@ -48,6 +55,6 @@
             <li>What you need to know</li>
             <li>Your hopes or fears</li> 
             <li>Potential outcome</li></ol></span></div>
-    </div>
+    </div></div>
 </body>
 </html>

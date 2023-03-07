@@ -7,7 +7,22 @@ console.log("linked")
 // columnOne.innerHTML = "<div class = 'card theHighPriestess'></div>"
 // c1c1.classList.add("theHighPriestess")
 
+// Starter screen for user to enter name for beginning of game
+const firstButton = document.getElementById("first-button");
+const introScreen = document.getElementById("intro-screen");
+const gameScreen = document.getElementById("game-screen");
+const playerNameInput = document.getElementById("player-name-input");
+const playerNameDisplay = document.getElementById("player-name-display");
 
+// function that dictates player name for the game
+function startGame() {
+  const playerName = playerNameInput.value;
+  playerNameDisplay.textContent = `Welcome ${playerName}!`;
+  introScreen.style.display = "none";
+  gameScreen.style.display = "block";
+}
+
+firstButton.addEventListener("click", startGame);
 
 // BELOW CODE: code for button to start shuffled deck reading displayed on browser
 const startButton = document.getElementById('start-button');
