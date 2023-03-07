@@ -24,6 +24,7 @@ function startGame() {
 
 firstButton.addEventListener("click", startGame);
 
+
 // BELOW CODE: code for button to start shuffled deck reading displayed on browser
 const startButton = document.getElementById('start-button');
 
@@ -132,6 +133,7 @@ const cards = document.querySelectorAll('.card');
 //SetAttribute (a method) calls on the current card element to set its class attribute to a string containing "card",
 //and the value of the corresponding element in the pickedCards array.
 //Now the card image will be displayed on the page.
+
 cards.forEach((card, index) => {
   console.log(pickedCards[index])
   card.setAttribute("class", `card ${pickedCards[index]}`);
@@ -140,6 +142,16 @@ cards.forEach((card, index) => {
   if (num === 0) {
     card.classList.add("flipped")
     reading.badCards += 1
+    // Bad card, so it counts as a negative point in the reading
+    if (reading.badCards > reading.goodCards) {
+      console.log("You got a bad card!")
+    }
+  } else {
+    // Good card, so it counts as a positive point in the reading
+    reading.goodCards += 1
+    if (reading.goodCards > reading.badCards) {
+      console.log("You got a good card!")
+    }
   }
 });
 

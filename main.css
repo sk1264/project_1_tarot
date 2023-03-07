@@ -5,6 +5,14 @@
     text-align: center;
 }
 
+#intro-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
 .parent{
     border: solid 2px white;
     background-color: white;
@@ -541,13 +549,13 @@
     transform: rotateX(180deg);
 }
 
-.tooltip {
+.tooltip{
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
   }
   
-.tooltip .tooltiptext {
+.tooltip .tooltiptext{
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -566,7 +574,7 @@
     transition: opacity 1s;
   }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext{
     visibility: visible;
     opacity: 1;
   }
