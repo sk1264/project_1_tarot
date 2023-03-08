@@ -588,6 +588,7 @@
     transform: rotateX(180deg);
 }
 
+/* w3schools */
 .tooltip{
     position: relative;
     display: inline-block;
@@ -618,7 +619,7 @@
     opacity: 1;
   }
 
-/* For desktop: */
+/* pulled from w3 schools */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}

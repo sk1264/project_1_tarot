@@ -22,10 +22,12 @@ function startGame() {
   gameScreen.style.display = "block";
 }
 
-firstButton.addEventListener("click", startGame);
 
 
 // BELOW CODE: code for button to start shuffled deck reading displayed on browser
+
+
+firstButton.addEventListener("click", startGame);
 const startButton = document.getElementById('start-button');
 
 // BELOW CODE: used to keep track of the number of "bad" and "good" cards that appear during a reading.
@@ -116,6 +118,7 @@ const tarotCards = [
   "kingOfPentacles",
 ]
 
+
 // for loop utilized to shuffle the array
 for (let i = tarotCards.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1));
@@ -127,6 +130,7 @@ const pickedCards = tarotCards.slice(0, 10);
 
 console.log(pickedCards)
 
+// returns elements in html i.e. the card images
 const cards = document.querySelectorAll('.card');
 
 //BELOW:
@@ -134,30 +138,37 @@ const cards = document.querySelectorAll('.card');
 //and the value of the corresponding element in the pickedCards array.
 //Now the card image will be displayed on the page.
 
+const goodCardsMin = 6;
+const badCardsMin = 6;
+let message = "";
+
 cards.forEach((card, index) => {
-  console.log(pickedCards[index])
+  console.log(pickedCards[index]);
   card.setAttribute("class", `card ${pickedCards[index]}`);
-  const num = getRandomNum (0, 2) 
-  console.log(num)
+  const num = getRandomNum(0, 2);
+  console.log(num);
   if (num === 0) {
-    card.classList.add("flipped")
-    reading.badCards += 1
+    card.classList.add("flipped");
+    reading.badCards += 1;
     // Bad card, so it counts as a negative point in the reading
-    if (reading.badCards > reading.goodCards) {
-      console.log("You got a bad card!")
+    if (reading.badCards >= badCardsMin) {
+      message = "You got 6 or more bad cards. You lose!";
+      console.log(message);
     }
+
   } else {
     // Good card, so it counts as a positive point in the reading
-    reading.goodCards += 1
-    if (reading.goodCards > reading.badCards) {
-      console.log("You got a good card!")
+    reading.goodCards += 1;
+    if (reading.goodCards >= goodCardsMin) {
+      message = "You got 6 or more good cards. You win!";
+      console.log(message);
     }
   }
-});
 
 });
 
+// return a number between a min and a max
 function getRandomNum (min, max) {
   return Math.floor(Math.random() * (max - min) + min); 
-  // return a number between a min and a max
-}
+  
+}})
