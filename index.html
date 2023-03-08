@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="main.css">
     <script defer src="./app.js"></script>
     <script src="jquery.js"></script>
+    <!-- jQuery function w3 schools -->
+    <script>
+        $(document).ready(function(){
+          $("#start-button").click(function(){
+            $(".test").fadeOut();
+            $(".test").fadeOut("fast");
+          });
+        });
+        </script>
+        <script>
+        $(document).ready(function() {
+        $("#first-event").hide();
+        $("#second-event").hide();
+        $("#third-event").hide();
+        $("#fourth-event").hide();
+        $("#fifth-event").hide();
+        $("#sixth-event").hide();
+        $("#seventh-event").hide();
+        $("#eighth-event").hide();
+        $("#ninth-event").hide();
+        $("#tenth-event").hide();
+        $("#start-button").click(function() {
+            $("#first-event").show();
+        });
+        });
+
+        $("#start-button").click(function() {
+        $("#first-event").hide();
+        $("#second-event").show();
+         });
+
+            </script>
     <div id="intro-screen">
         <h1>Discover your fate!</h1>
         <p>Please enter your name:</p>
@@ -18,28 +50,48 @@
     <title>Tarot Card Game of Life</title>
     <div id="game-screen" style="display: none;">
         <h2 id="player-name-display"></h2>
-    <h1>Welcome to Tarot Card Game of Life!</h1>
-    <p>Let the games begin...</p>
-    <p>You are about to embark on a journey through the 10 biggest events of life. Based on your reading during each event, you will either receive a good or bad reading that will dictate a win or loss for each event. Get 6 or more good readings and you are a winner at life! However, get 6 or more bad readings and, well, the future isn’t looking too bright.</p>
+    <h1 class="test">Welcome to Tarot Card Game of Life!</h1>
+    <p class="test">Let the games begin...</p>
+    <p class="test">You are about to embark on a journey through the 10 biggest events of life. Based on your reading during each event, you will either receive a good or bad reading that will dictate a win or loss for each event. Get 6 or more good readings and you are a winner at life! However, get 6 or more bad readings and, well, the future isn’t looking too bright.</p>
     <button id="start-button">Give me my reading!</button>
+    <p id="first-event">College is the first step into our journey. Will you graduate on good or bad terms?</p>
+    <p id="second-event">Next, you are about to go on a date with your dream person. Is love on the horizon?</p>
+    <p id="third-event">You just landed an interview for your first adult job! Will it go well?</p>
+    <p id="fourth-event">Now let's check on your career trajectory - are you climbing the ladder or stuck trying to move up?</p>
+    <p id="fifth-event">I hear wedding bells! Does it look like a good future for the two of you?</p>
+    <p id="sixth-event">It's about that time for your very first home purchase. Did you make the right decision?</p>
+    <p id="seventh-event">First baby is on the way! Does the future look bright and healthy for your family?</p>
+    <p id="eighth-event">Oh no! It's your first major health scare. Do the cards suspect something terrible?</p>
+    <p id="ninth-event">Looks like you're experiencing a mid-life crisis (don't worry we all have one). How's it going for you?</p>
+    <p id="tenth-event">Lastly, it's time for retirement and beyond. How is it looking for you?</p>
     <div class="parent">
         <div class="table">
             <div class="column one">
+                <p>4</p>
                 <div class="card"></div>
             </div>
             <div class="column two">
+                <p>5</p>
             <div class="card"></div>
+                <p>1</p>
             <div class="card"></div>
             <div id="overlay" class="card"></div>
+            <p>2</p>
+                <p>3</p>
             <div class="card"></div>
             </div>
             <div class="column three">
+                <p>6</p>
                 <div class="card"></div>
             </div>
             <div class="column four">
+                <p>10</p>
                 <div class="card"></div>
+                <p>9</p>
                 <div class="card"></div>
+                <p>8</p>
                 <div class="card"></div>
+                <p>7</p>
                 <div class="card"></div>
             </div>
         </div>
@@ -57,4 +109,4 @@
             <p>10. Potential outcome</p></span></div>
     </div></div>
 </body>
-</html>}
+</html>

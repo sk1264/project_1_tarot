@@ -14,6 +14,8 @@ const gameScreen = document.getElementById("game-screen");
 const playerNameInput = document.getElementById("player-name-input");
 const playerNameDisplay = document.getElementById("player-name-display");
 
+
+
 // function that dictates player name for the game
 function startGame() {
   const playerName = playerNameInput.value;
@@ -21,8 +23,6 @@ function startGame() {
   introScreen.style.display = "none";
   gameScreen.style.display = "block";
 }
-
-
 
 // BELOW CODE: code for button to start shuffled deck reading displayed on browser
 
@@ -118,6 +118,18 @@ const tarotCards = [
   "kingOfPentacles",
 ]
 
+const placement = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10"
+]
 
 // for loop utilized to shuffle the array
 for (let i = tarotCards.length - 1; i > 0; i--) {
@@ -152,20 +164,20 @@ cards.forEach((card, index) => {
     reading.badCards += 1;
     // Bad card, so it counts as a negative point in the reading
     if (reading.badCards >= badCardsMin) {
-      message = "You got 6 or more bad cards. You lose!";
+      message = "You got 6 or more bad cards. You lose this round!";
       console.log(message);
     }
-
   } else {
     // Good card, so it counts as a positive point in the reading
     reading.goodCards += 1;
     if (reading.goodCards >= goodCardsMin) {
-      message = "You got 6 or more good cards. You win!";
+      message = "You got 6 or more good cards. You win this round!";
       console.log(message);
     }
   }
 
 });
+
 
 // return a number between a min and a max
 function getRandomNum (min, max) {
