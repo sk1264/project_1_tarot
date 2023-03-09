@@ -226,7 +226,6 @@ cards.forEach((card, index) => {
   }
   else {
     state.reading.goodCards += 1;
-
   }
 });
 //finished looping through cards and counting which are good or bad
