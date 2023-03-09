@@ -234,7 +234,7 @@ cards.forEach((card, index) => {
 if (state.reading.badCards >= badCardsMin) {
   message = "You got 6 or more bad cards. You lose this round!";
   console.log(message);
-} else { (state.reading.goodCards >= goodCardsMin) 
+} else if (state.reading.goodCards >= goodCardsMin) {
   message = "You got 6 or more good cards. You win this round!";
   console.log(message);
 }
