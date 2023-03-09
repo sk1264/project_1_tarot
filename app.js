@@ -177,18 +177,18 @@ const tarotCards = [
   "kingOfPentacles",
 ]
 
-const placement = [
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10"
-]
+// const placement = [
+//   "1",
+//   "2",
+//   "3",
+//   "4",
+//   "5",
+//   "6",
+//   "7",
+//   "8",
+//   "9",
+//   "10"
+// ]
 
 // for loop utilized to shuffle the array
 for (let i = tarotCards.length - 1; i > 0; i--) {
@@ -226,6 +226,7 @@ cards.forEach((card, index) => {
   }
   else {
     state.reading.goodCards += 1;
+    console.log("You got a good card.")
   }
 });
 //finished looping through cards and counting which are good or bad
@@ -233,14 +234,15 @@ cards.forEach((card, index) => {
 if (state.reading.badCards >= badCardsMin) {
   message = "You got 6 or more bad cards. You lose this round!";
   console.log(message);
-}
-else {
+} else { (state.reading.goodCards >= goodCardsMin) 
   message = "You got 6 or more good cards. You win this round!";
   console.log(message);
 }
 
+setTimeout(() => {
 messageVisual.innerText = message;
 readingResult.classList.toggle("hidden");
+}, "2000");
 
 // return a number between a min and a max
 function getRandomNum (min, max) {
