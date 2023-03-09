@@ -57,8 +57,6 @@ function startGame() {
   lifeEvent.innerText = lifeEvents[state.currentLifeEvent];
 }
 
-console.log(currentLifeEvent)
-
 // BELOW CODE: code for button to start shuffled deck reading displayed on browser
 
 startButton.addEventListener("click", startGame);
@@ -90,9 +88,11 @@ const state = {
 }
 
 function nextLifeEvent(){
+  readingResult.classList.toggle("hidden");
+  state.currentLifeEvent += 1;
+}
   // hide the reading result div by toggling hidden class
   // set state.currentLifeEvent to += 1
-}
 
 
 readingButton.addEventListener('click', () => {
