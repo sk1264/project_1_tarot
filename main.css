@@ -13,7 +13,7 @@
     height: 100vh;
   }
 
-#first-button {
+#start-button {
     background-color: #c56cf5;
     border-radius: 12px;
     border: 2px solid black;
@@ -27,7 +27,7 @@
     cursor: pointer;
 }
 
-#start-button {
+#reading-button {
     background-color: #c56cf5;
     border-radius: 8px;
     border: 2px solid black;
@@ -47,6 +47,20 @@
     padding: 5px 14px;
 }
 
+.hidden{
+    display: none;
+}
+
+.readingResult {
+    width: 60%;
+    height: 300px;
+    border: solid 2px black;
+    background: whitesmoke;
+    position: absolute;
+    top: 135px;
+    left: 236px;
+}
+
 .parent{
     border: solid 2px white;
     background-color: white;
@@ -54,6 +68,7 @@
     padding: 2%;
     width: 100%;
     display: flex;
+    position: relative;
 }
 
 .table{
