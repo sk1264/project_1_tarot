@@ -137,6 +137,7 @@
     width: 140px;
     position: relative;
     display: inline-block;
+    border-radius: 5px;
 }
 
 #overlay{

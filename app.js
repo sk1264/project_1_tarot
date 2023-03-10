@@ -6,29 +6,38 @@ console.log($)
           });
         });
 
-        $(document).ready(function() {
-        $("#first-event").hide();
-        $("#second-event").hide();
-        $("#third-event").hide();
-        $("#fourth-event").hide();
-        $("#fifth-event").hide();
-        $("#sixth-event").hide();
-        $("#seventh-event").hide();
-        $("#eighth-event").hide();
-        $("#ninth-event").hide();
-        $("#tenth-event").hide();
-        $("#reading-button").click(function() {
-            $("#first-event").show();
-        });
+        // $(document).ready(function(){
+        //   $("#reading-button").click(function(){
+        //     $("#reading-button").fadeOut();
+        //   });
+        // });
+
+        $(document).ready(function(){
+          $("#reading-button").click(function(){
+            $("#player-name-display").fadeOut();
+          });
         });
 
-        $("#reading-button").click(function() {
-        $("#first-event").hide();
-        $("#second-event").show();
-         });
+        // $(document).ready(function() {
+        // $("#first-event").hide();
+        // $("#second-event").hide();
+        // $("#third-event").hide();
+        // $("#fourth-event").hide();
+        // $("#fifth-event").hide();
+        // $("#sixth-event").hide();
+        // $("#seventh-event").hide();
+        // $("#eighth-event").hide();
+        // $("#ninth-event").hide();
+        // $("#tenth-event").hide();
+        // $("#reading-button").click(function() {
+        //     $("#first-event").show();
+        // });
+        // });
 
-
-console.log("linked")
+        // $("#reading-button").click(function() {
+        // $("#first-event").hide();
+        // $("#second-event").show();
+        //  });
   // visual html elements
 // const columnOne = document.querySelector(".one")
 // console.log(columnOne)
@@ -77,27 +86,6 @@ const lifeEvents = [
   "Lastly, it's time for retirement and beyond. How is it looking for you?",
 ]
 
-
-const state = {
-  reading: {
-    badCards: 0,
-    goodCards: 0,
-  },
-  lifePoints: 0,
-  currentLifeEvent: 0
-}
-
-function nextLifeEvent(){
-  readingResult.classList.toggle("hidden");
-  state.currentLifeEvent += 1;
-}
-  // hide the reading result div by toggling hidden class
-  // set state.currentLifeEvent to += 1
-
-
-readingButton.addEventListener('click', () => {
-
-// variable for the tarot cards array in the deck
 const tarotCards = [
   "theHighPriestess",
   "theEmpress",
@@ -177,43 +165,41 @@ const tarotCards = [
   "kingOfPentacles",
 ]
 
-// const placement = [
-//   "1",
-//   "2",
-//   "3",
-//   "4",
-//   "5",
-//   "6",
-//   "7",
-//   "8",
-//   "9",
-//   "10"
-// ]
-
-// for loop utilized to shuffle the array
-for (let i = tarotCards.length - 1; i > 0; i--) {
-  const j = Math.floor(Math.random() * (i + 1));
-  [tarotCards[i], tarotCards[j]] = [tarotCards[j], tarotCards[i]];
+const state = {
+  reading: {
+    badCards: 0,
+    goodCards: 0,
+  },
+  lifePoints: 0,
+  currentLifeEvent: 0
 }
 
-// new array that contains the first 10 cards of tarotCards
-const pickedCards = tarotCards.slice(0, 10);
+function nextLifeEvent(){
+  readingResult.classList.toggle("hidden");
+  state.currentLifeEvent += 1;
+}
+  // hide the reading result div by toggling hidden class
+  // set state.currentLifeEvent to += 1
 
-console.log(pickedCards)
+function shuffleCards(tarotDeck) {
+  for (let i = tarotDeck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tarotDeck[i], tarotDeck[j]] = [tarotDeck[j], tarotDeck[i]];
+  }
+  const pickedCards = tarotDeck.slice(0, 10);
+  console.log(pickedCards)
+  return pickedCards
+}
 
-// returns elements in html i.e. the card images
-const cards = document.querySelectorAll('.card');
 
-//BELOW:
-//SetAttribute (a method) calls on the current card element to set its class attribute to a string containing "card",
-//and the value of the corresponding element in the pickedCards array.
-//Now the card image will be displayed on the page.
+function renderCardsToScreen(pickedCards){
+  const cards = document.querySelectorAll('.card'); //grabbing an array of html elements 
+  const goodCardsMin = 6;
+  const badCardsMin = 6;
+  let message = "";
 
-const goodCardsMin = 6;
-const badCardsMin = 6;
-let message = "";
-
-cards.forEach((card, index) => {
+  //looping over card divs to assign them flipped/bad and background images
+  cards.forEach((card, index) => {
   console.log(pickedCards[index]);
   card.setAttribute("class", `card ${pickedCards[index]}`);
   const num = getRandomNum(0, 2);
@@ -230,22 +216,39 @@ cards.forEach((card, index) => {
   }
 });
 //finished looping through cards and counting which are good or bad
-
-if (state.reading.badCards >= badCardsMin) {
+if (state.reading.badCards >= badCardsMin || 5) {
   message = "You got 6 or more bad cards. You lose this round!";
   console.log(message);
 } else if (state.reading.goodCards >= goodCardsMin) {
   message = "You got 6 or more good cards. You win this round!";
   console.log(message);
-}
+
 
 setTimeout(() => {
-messageVisual.innerText = message;
-readingResult.classList.toggle("hidden");
-}, "2000");
+  messageVisual.innerText = message;
+  console.log(messageVisual)
+  readingResult.classList.toggle("hidden");
+  }, 1000);
+}} //end of function---------------------------------------------
+
+
+
+// ----------------------------------------------------------- <3
+readingButton.addEventListener('click', () => {
+const pickedCards = shuffleCards(tarotCards) //shuffled deck and grabbed 10 cards
+renderCardsToScreen(pickedCards)
+
+const nextButton = document.querySelector(".nextReading");
+nextButton.addEventListener("click", nextLifeEvent);
+})
+
+// if (state.currentLifeEvent += 6) {
+//   message = "You won!";
+//   console.log(message);
+// } 
+
 
 // return a number between a min and a max
 function getRandomNum (min, max) {
   return Math.floor(Math.random() * (max - min) + min); 
-  
-}})
+}
