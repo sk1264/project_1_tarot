@@ -5,7 +5,12 @@
     text-align: center;
 }
 
-#intro-screen {
+.gameScreen {
+    display: flex;
+    flex-direction: column;
+}
+
+.introScreen {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,6 +124,133 @@
     font-size: 18px;
     
 }
+
+.eventImage{
+    border: solid 2px black;
+    height: 100px;
+}
+
+.college{
+    background: url(./event_images/graduation.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.date{
+    background: url(./event_images/first_date.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.interview{
+    background: url(./event_images/job_interview.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.career{
+    background: url(./event_images/career.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.wedding{
+    background: url(./event_images/wedding.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.home{
+    background: url(./event_images/new_home.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.baby{
+    background: url(./event_images/first_baby.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.health{
+    background: url(./event_images/health_scare.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.crisis{
+    background: url(./event_images/mid_life_crisis.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.retirement{
+    background: url(./event_images/retirement.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 2px white;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/* do rest of the image classes */
+
 
 .column {
     height: 100%;

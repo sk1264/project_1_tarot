@@ -8,7 +8,7 @@
     <script defer src="jquery.js"></script>
     <script defer src="./app.js"></script>
     <!-- jQuery function w3 schools -->
-    <div id="intro-screen">
+    <div class="introScreen">
         <h1>Discover your fate!</h1>
         <p>Please enter your name:</p>
         <input type="text" id="player-name-input" />
@@ -17,7 +17,7 @@
 </head>
 <body>
     <title>Tarot Card Game of Life</title>
-    <div id="game-screen" style="display: none;">
+    <div id="game-screen" class="hidden gameScreen">
         <h2 id="player-name-display"></h2>
     <h1 class="test">Welcome to Tarot Card Game of Life!</h1>
     <p class="test">Let the games begin...</p>
@@ -59,18 +59,23 @@
                 <div class="card"></div>
             </div>
         </div>
-        <div class="interpretation"><span>
+        <div class="interpretation">
+            <div class="eventImage"></div>
             <header><b>Interpretation</b></header>
-            <p>1. Where you are now</p>
-            <p>2. Potential or challenges</p> 
-            <p>3. Where to direct focus</p>
-            <p>4. Look at the past</p>
-            <p>5. Your unique strength</p>
-            <p>6. Glance at the near future</p>
-            <p>7. Suggested Approach</p>
-            <p>8. What you need to know</p>
-            <p>9. Your hopes or fears</p>
-            <p>10. Potential outcome</p></span></div>
-    </div></div>
+            <div id="interpItems">
+                <p>1. Where you are now</p>
+                <p>2. Potential or challenges</p> 
+                <p>3. Where to direct focus</p>
+                <p>4. Look at the past</p>
+                <p>5. Your unique strength</p>
+                <p>6. Glance at the near future</p>
+                <p>7. Suggested Approach</p>
+                <p>8. What you need to know</p>
+                <p>9. Your hopes or fears</p>
+                <p>10. Potential outcome</p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
