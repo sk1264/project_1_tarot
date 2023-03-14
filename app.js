@@ -29,6 +29,7 @@ const readingButton = document.getElementById('reading-button');
 const interpretation = document.querySelector(".interpretation");
 const interpItems = document.querySelector("#interpItems");
 const eventImage = document.querySelector(".eventImage");
+const destinyButton = document.querySelector(".destinyButton");
   
 //-------------ATTACHING EVENT LISTENERS-----💥
 nextButton.addEventListener("click", nextLifeEvent);
@@ -37,6 +38,9 @@ readingButton.addEventListener('click', produceReading);
 interpretation.addEventListener("click",()=>{
   interpItems.classList.toggle("hidden");
 })
+// destinyButton.addEventListener("click", ()=>{
+//   destinyReading.classList.toggle("hidden")});
+
 
 // function that dictates player name for the game, hides intro screen, shows game screen, and displays first life event
 function startGame() {
@@ -49,7 +53,6 @@ function startGame() {
   lifeEvent.innerText = lifeEvents[state.currentLifeEvent]; //<---- staring our 
 }
 //button to start shuffled deck reading displayed on browser
-
 
 
 
@@ -184,6 +187,7 @@ function nextLifeEvent(){
     eventImage.classList.toggle(eventImages[state.currentLifeEvent])
     lifeEvent.innerText = lifeEvents[state.currentLifeEvent]; //<---- staring our 
 }
+// -----------------------------------------------------------------------
 
 // -----------------------------------------------------------------------
 // for loop iterates through the tarotDeck array
@@ -260,7 +264,6 @@ function produceReading() {
 }
 
 // ----------------------------------------------------------- <3
-
 
 
 // return a number between a min and a max relating to looping over the cards to assign thems
