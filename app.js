@@ -189,6 +189,7 @@ function nextLifeEvent(){
 }
 // -----------------------------------------------------------------------
 
+
 // -----------------------------------------------------------------------
 // for loop iterates through the tarotDeck array
 
@@ -238,12 +239,6 @@ if(state.reading.badCards >= 5) {
 }
 
 //finished looping through cards and counting which are good or bad
-// if ((state.reading.badCards >= badCardsMin) || (state.reading.badCards === 5)) {
-//   message = "You got 6 or more bad cards. You lose this round!";
-//   console.log(message);
-// } else if (state.reading.goodCards >= goodCardsMin) {
-//   message = 
-//   console.log(message);
 
 setTimeout(() => {
     messageVisual.innerText = message;
@@ -262,6 +257,7 @@ function produceReading() {
 
 
 }
+
 
 // ----------------------------------------------------------- <3
 
