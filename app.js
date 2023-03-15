@@ -29,12 +29,13 @@ const readingButton = document.getElementById('reading-button');
 const interpretation = document.querySelector(".interpretation");
 const interpItems = document.querySelector("#interpItems");
 const eventImage = document.querySelector(".eventImage");
-const destinyButton = document.querySelector(".destinyButton");
+const destinyButton = document.querySelector(".destinyResult");
   
 //-------------ATTACHING EVENT LISTENERS-----💥
 nextButton.addEventListener("click", nextLifeEvent);
 startButton.addEventListener("click", startGame);
 readingButton.addEventListener('click', produceReading);
+//destinyButton.addEventListener("click", destinyResult);
 interpretation.addEventListener("click",()=>{
   interpItems.classList.toggle("hidden");
 })
@@ -176,19 +177,20 @@ const state = {
 // toggles the hidden class on the readingResult element
 // increments the currentLifeEvent property of the state object by 1, tracks current life event number
 function nextLifeEvent(){
-//if state.currentLifeEvent === 9 then {
-  //show the final page
-
     readingResult.classList.toggle("hidden"); //hiding the result popup
     state.currentLifeEvent += 1; //inciment the life event index
 
     //inject next life event TEXT
     //inject next life event image
     eventImage.classList.toggle(eventImages[state.currentLifeEvent])
-    lifeEvent.innerText = lifeEvents[state.currentLifeEvent]; //<---- staring our 
-}
-// -----------------------------------------------------------------------
+    lifeEvent.innerText = lifeEvents[state.currentLifeEvent];//<---- staring our 
 
+    // if (state.currentLifeEvent === 9) {
+    //   message = "Click for your destiny.";
+    //   console.log(message);
+    // }
+  }
+// -----------------------------------------------------------------------
 
 // -----------------------------------------------------------------------
 // for loop iterates through the tarotDeck array
@@ -251,13 +253,9 @@ function produceReading() {
   state.reading.badCards = 0; //resetting the reading values since we are starting a NEW reading.
   state.reading.goodCards = 0;
 
-
   const pickedCards = shuffleCards(tarotCards) //shuffled deck and grabbed 10 cards
   renderCardsToScreen(pickedCards)
-
-
 }
-
 
 // ----------------------------------------------------------- <3
 
