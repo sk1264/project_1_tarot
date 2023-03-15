@@ -35,12 +35,12 @@ const destinyButton = document.querySelector(".destinyResult");
 nextButton.addEventListener("click", nextLifeEvent);
 startButton.addEventListener("click", startGame);
 readingButton.addEventListener('click', produceReading);
-//destinyButton.addEventListener("click", destinyResult);
+//destinyButton.addEventListener('click', destinyResult);
 interpretation.addEventListener("click",()=>{
   interpItems.classList.toggle("hidden");
 })
-// destinyButton.addEventListener("click", ()=>{
-//   destinyReading.classList.toggle("hidden")});
+destinyButton.addEventListener("click", ()=>{
+  destinyReading.classList.toggle("hidden")});
 
 
 // function that dictates player name for the game, hides intro screen, shows game screen, and displays first life event
@@ -184,11 +184,6 @@ function nextLifeEvent(){
     //inject next life event image
     eventImage.classList.toggle(eventImages[state.currentLifeEvent])
     lifeEvent.innerText = lifeEvents[state.currentLifeEvent];//<---- staring our 
-
-    // if (state.currentLifeEvent === 9) {
-    //   message = "Click for your destiny.";
-    //   console.log(message);
-    // }
   }
 // -----------------------------------------------------------------------
 
@@ -237,6 +232,11 @@ if(state.reading.badCards >= 5) {
   console.log(message);
 } else {
   message = "You got 6 or more good cards. You win this round!";
+  console.log(message);
+}
+
+if (state.currentLifeEvent === 9) {
+  message = "Click for your destiny.";
   console.log(message);
 }
 
