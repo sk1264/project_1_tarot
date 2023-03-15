@@ -37,8 +37,7 @@ startButton.addEventListener("click", startGame);
 readingButton.addEventListener('click', produceReading);
 //destinyButton.addEventListener('click', destinyResult);
 interpretation.addEventListener("click",()=>{
-  interpItems.classList.toggle("hidden");
-})
+  interpItems.classList.toggle("hidden");})
 destinyButton.addEventListener("click", ()=>{
   destinyReading.classList.toggle("hidden")});
 
@@ -50,7 +49,7 @@ function startGame() {
   introScreen.classList.toggle("hidden");
   gameScreen.classList.toggle("hidden");
   // gameScreen.classList.toggle("gameScreen");
-  eventImage.setAttribute("class", eventImages[state.currentLifeEvent]);
+  eventImage.setAttribute("class", eventImages[state.currentLifeEvent]); //<------event images populate after each life event
   lifeEvent.innerText = lifeEvents[state.currentLifeEvent]; //<---- staring our 
 }
 //button to start shuffled deck reading displayed on browser
@@ -247,7 +246,8 @@ setTimeout(() => {
     console.log(messageVisual)
     readingResult.classList.toggle("hidden");
     }, 1000);
-   } //end of function---------------------------------------------
+   } 
+//end of function---------------------------------------------
 
 function produceReading() {
   state.reading.badCards = 0; //resetting the reading values since we are starting a NEW reading.
