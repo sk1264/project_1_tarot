@@ -14,6 +14,12 @@ console.log($)
           });
         });
 
+        $(document).ready(function(){
+          $(".destinyButton").click(function(){
+            $("#reading-button").fadeOut();
+          });
+        });
+
 //-----------------------------VISUAL HTML ELEMENTS------👀-
 // Starter screen for user to enter name for beginning of game
 const startButton = document.getElementById("start-button");
@@ -29,17 +35,37 @@ const readingButton = document.getElementById('reading-button');
 const interpretation = document.querySelector(".interpretation");
 const interpItems = document.querySelector("#interpItems");
 const eventImage = document.querySelector(".eventImage");
-const destinyButton = document.querySelector(".destinyResult");
+const destinyResult = document.querySelector(".destinyResult")
+const destinyButton = document.querySelector(".destinyButton");
+const endGame = document.querySelector(".endGame");
+const endMessage = document.querySelector(".endMessage");
+const table = document.querySelector(".table");
   
 //-------------ATTACHING EVENT LISTENERS-----💥
 nextButton.addEventListener("click", nextLifeEvent);
 startButton.addEventListener("click", startGame);
 readingButton.addEventListener('click', produceReading);
-//destinyButton.addEventListener('click', destinyResult);
-interpretation.addEventListener("click",()=>{
-  interpItems.classList.toggle("hidden");})
 destinyButton.addEventListener("click", ()=>{
-  destinyReading.classList.toggle("hidden")});
+    destinyResult.classList.toggle("hidden");
+    lifeEvent.classList.toggle("hidden");
+    table.classList.toggle("table");
+    interpretation.classList.toggle("interpretation");
+    endGame.classList.toggle("endGame");
+
+
+  if (state.lifePoints >= 6) {
+    endMessage.innerText = "You got 6 or more bad readings. You win the game of life!";
+  console.log(message);}
+  else {
+    endMessage.innerText = "You got 6 or more good readings. You win the game of life!";
+    console.log(message);
+  }
+// then in this if statement if life points is less than or equal to 2
+// then end game div.classlist.toggle (bad life class)(good life class)
+
+
+
+});
 
 
 // function that dictates player name for the game, hides intro screen, shows game screen, and displays first life event
@@ -48,6 +74,7 @@ function startGame() {
   playerNameDisplay.textContent = `Hello, ${playerName}.`;
   introScreen.classList.toggle("hidden");
   gameScreen.classList.toggle("hidden");
+  endGame.classList.toggle("endGame");
   // gameScreen.classList.toggle("gameScreen");
   eventImage.setAttribute("class", eventImages[state.currentLifeEvent]); //<------event images populate after each life event
   lifeEvent.innerText = lifeEvents[state.currentLifeEvent]; //<---- staring our 
@@ -186,6 +213,7 @@ function nextLifeEvent(){
   }
 // -----------------------------------------------------------------------
 
+
 // -----------------------------------------------------------------------
 // for loop iterates through the tarotDeck array
 
@@ -231,12 +259,16 @@ if(state.reading.badCards >= 5) {
   console.log(message);
 } else {
   message = "You got 6 or more good cards. You win this round!";
+  state.lifePoints += 1;
   console.log(message);
 }
 
 if (state.currentLifeEvent === 9) {
+  readingResult.classList.toggle("hidden");
+  destinyResult.classList.toggle("hidden");
   message = "Click for your destiny.";
   console.log(message);
+
 }
 
 //finished looping through cards and counting which are good or bad

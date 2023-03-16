@@ -30,13 +30,18 @@
             <button class="nextReading">Next reading.</button>
         </div>
         <div class="destinyResult hidden">
-            <h2 class="message"></h2>
-            <button class="destinyResult">Your destiny.</button>
+            <h2>Click to meet your destiny.</h2>
+            <button class="destinyButton">Your destiny.</button>
         </div>
-        <div class="table">
+        <div class="endGame hidden">
+            <h2 class="endMessage"></h2>
+        </div>
+        <div class="table hidden">
             <div class="column one">
                 <p>4</p>
-                <div class="card"></div>
+                <div class="card">
+                    <div class="toolTip"></div>
+                </div>
             </div>
             <div class="column two">
                 <p>5</p>
@@ -63,7 +68,7 @@
                 <div class="card"></div>
             </div>
         </div>
-        <div class="interpretation">
+        <div class="interpretation hidden">
             <div class="eventImage"></div>
             <header><b>Interpretation</b></header>
             <div id="interpItems">
