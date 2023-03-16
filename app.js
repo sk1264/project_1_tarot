@@ -60,8 +60,6 @@ destinyButton.addEventListener("click", ()=>{
     endMessage.innerText = "You got 6 or more good readings. You win the game of life!";
     console.log(message);
   }
-// then in this if statement if life points is less than or equal to 2
-// then end game div.classlist.toggle (bad life class)(good life class)
 
 
 
