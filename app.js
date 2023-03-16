@@ -53,11 +53,11 @@ destinyButton.addEventListener("click", ()=>{
     endGame.classList.toggle("endGame");
 
 
-  if (state.lifePoints >= 6) {
-    endMessage.innerText = "You got 6 or more bad readings. You win the game of life!";
+  if (state.lifePoints >= 5) {
+    endMessage.innerText = "You got 6 or more good readings. You win the game of life!";
   console.log(message);}
   else {
-    endMessage.innerText = "You got 6 or more good readings. You win the game of life!";
+    endMessage.innerText = "You got 6 or more bad readings. You lose the game of life!";
     console.log(message);
   }
 
